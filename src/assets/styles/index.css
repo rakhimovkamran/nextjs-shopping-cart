@@ -1,0 +1,36 @@
+@import url("http://fonts.cdnfonts.com/css/gilroy-bold?styles=20876,20878,20879,20880");
+
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+@layer base {
+    html,
+    body {
+        @apply font-regular text-base m-0 p-0 bg-gray-100;
+    }
+
+    input:focus + .input-placeholder,
+    input:not(:placeholder-shown) + .input-placeholder {
+        @apply -top-5 text-sm;
+    }
+
+    *:focus {
+        outline: none;
+    }
+
+    button:disabled {
+        cursor: default;
+    }
+
+    /* Input [number] arrows */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+}

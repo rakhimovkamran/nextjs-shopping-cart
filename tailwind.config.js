@@ -17,10 +17,6 @@ module.exports = {
                 "360p": "360px",
             },
 
-            gridTemplateColumns: {
-                "a-450p": "auto 450px",
-            },
-
             fontFamily: {
                 regular: "Gilroy-Regular",
                 medium: "Gilroy-Medium",

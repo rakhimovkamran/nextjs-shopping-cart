@@ -16,7 +16,7 @@ const EmptyState = () => {
             <Image height={200} width={200} alt="Empty" src={EmptyStateImage} />
             <p className="text-2xl text-gray-600">Ooops ! There is nothing</p>
             <p className="text-lg text-gray-500 mt-1">
-                Back to the catalogue and buy something !
+                Back to the catalogue and choose something !
             </p>
 
             <div className="w-48 mt-10">

@@ -46,7 +46,7 @@ export const MOCK_PRODUCTS: Product[] = [
 
     {
         _id: "#4231653",
-        name: "Healthy Eggs",
+        name: "Healthy Salad",
         price: { value: 2.9, currency: "USD" },
 
         photoURL:

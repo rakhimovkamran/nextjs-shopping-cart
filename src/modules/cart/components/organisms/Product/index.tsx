@@ -14,6 +14,8 @@ import {
     enterProductQuantity,
 } from "store/reducers/main"
 
+import { motion } from "framer-motion"
+
 const Product: FC<ProductProps> = ({ _id, ...product }) => {
     const dispatch = useAppDispatch()
 
@@ -27,7 +29,10 @@ const Product: FC<ProductProps> = ({ _id, ...product }) => {
     }
 
     return (
-        <div className="w-full grid grid-cols-3 items-center border-b py-4">
+        <motion.div
+            className="w-full grid grid-cols-3 items-center border-b py-4"
+            layout
+        >
             <div className="flex items-center">
                 <img
                     className="w-36 h-36 rounded-full"
@@ -61,7 +66,7 @@ const Product: FC<ProductProps> = ({ _id, ...product }) => {
                     onClick={handleRemoveProduct}
                 />
             </div>
-        </div>
+        </motion.div>
     )
 }
 

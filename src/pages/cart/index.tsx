@@ -14,6 +14,8 @@ import {
     Subtotal,
 } from "modules/cart/components/organisms"
 
+import { AnimateSharedLayout } from "framer-motion"
+
 export default function Cart() {
     const products = useAppSelector(({ main }) => main.cart)
     const [creditCard, setCreditCard] = useState<CreditCard>({} as CreditCard)
@@ -60,12 +62,14 @@ export default function Cart() {
                         {products.length !== 0 ? (
                             <>
                                 <div className="flex flex-col flex-1">
-                                    {products.map((product) => (
-                                        <Product
-                                            key={product._id}
-                                            {...product}
-                                        />
-                                    ))}
+                                    <AnimateSharedLayout>
+                                        {products.map((product) => (
+                                            <Product
+                                                key={product._id}
+                                                {...product}
+                                            />
+                                        ))}
+                                    </AnimateSharedLayout>
                                 </div>
 
                                 <Subtotal />
